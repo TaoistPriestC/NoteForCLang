@@ -2,7 +2,8 @@
     "files.associations": {
         "stdio.h": "c",
         "inet.h": "c",
-        "features.h": "c"
+        "features.h": "c",
+        "types.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

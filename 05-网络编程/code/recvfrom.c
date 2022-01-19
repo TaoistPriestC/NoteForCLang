@@ -8,6 +8,8 @@
 #include <string.h>
 
 #define MAXN 128
+
+//使用IP:192.168.3.78,端口:8080创建一个服务器,用于接受信息
 int main(int argc, char *argv[]){
    // ./recvfrom.out 192.168.3.78 8080
     if(argc < 3){
