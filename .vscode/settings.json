@@ -3,7 +3,10 @@
         "stdio.h": "c",
         "inet.h": "c",
         "features.h": "c",
-        "types.h": "c"
+        "types.h": "c",
+        "fcntl.h": "c",
+        "stat.h": "c",
+        "unistd.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
