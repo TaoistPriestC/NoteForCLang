@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXN 3
+#define MAXN 256
 typedef struct string{
     int size;
     int capacity;
@@ -119,6 +119,7 @@ int main(){
     string s;
     init(&s);
     pushback(&s, "ld!");
+
     /**
      * 此时可以写入一些测试用例,
      * 用于测试函数接口!
