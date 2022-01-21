@@ -22,17 +22,20 @@ void initByTxT(string *str, const char *txt){
 
 void pushback(string *str, const char *txt){
     int extraLen = strlen(txt);
-    while(str->size + extraLen >= str->capacity){
+    if(str->size + extraLen >= str->capacity){
         str->capacity = 2 * str->capacity + 1;
+        str->buf = (char *)realloc(str->buf, str->capacity);
+        if (str->buf == NULL){
+            exit(EXIT_FAILURE);
+        }
     }
-    str->buf = (char *)realloc(str->buf, str->capacity);
     str->size += extraLen;
     strcat(str->buf, txt);
 }
 
 void deleteInterval(string *str, int a, int b){
     while (b < str->size){
-        str->buf[a++] = str->buf[++b];
+        str->buf[a++] = str->buf[b++];
     }
     str->size -= (b - a + 1);
     if(4 * str->size <= str->capacity){
@@ -45,7 +48,16 @@ void deleteIndex(string *str, int idx){
     deleteInterval(str, idx, idx);
 }
 
-void modefy(string *str, int idx, char newChar){
+
+void modifySegment(string *str, int a, int b, char newChar){
+     if(a >= 0 && b < this->size && a <= b){
+        for (int i = a; i < b; i++){
+            str->buf[i] = newChar;
+        }
+    }
+}
+
+void modify(string *str, int idx, char newChar){
     if (idx >= 0 && idx < str->size){
         str->buf[idx] = newChar;
     }
@@ -56,7 +68,13 @@ char* slice(string *str,int a, int b){
     for (int i = a; i < b; i++){
         buf[i] = str->buf[i];
     }
+    // 返回动态分配的指针意味着程序员要自己记得释放
     return buf;
+}
+
+
+char* sliceToEnd(string *str,int from){
+    return slice(str, from, str->size);
 }
 
 int searchByTXT(string * str, const char *txt){
