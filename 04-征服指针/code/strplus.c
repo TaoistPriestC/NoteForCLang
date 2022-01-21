@@ -68,6 +68,8 @@ StringPtr _push_char(struct string *this, char ch){
 
 
 StringPtr _delete_Interval(struct string *this, int a, int b){
+    if (a < 0 || a >= this->size || b < 0 || b >= this->size || b < a)
+        exit(EXIT_FAILURE);
     while (b < this->size){
         this->buf[a++] = this->buf[b++];
     }
@@ -204,14 +206,3 @@ int main(){
      */
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
