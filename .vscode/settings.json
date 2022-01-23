@@ -7,7 +7,10 @@
         "fcntl.h": "c",
         "stat.h": "c",
         "unistd.h": "c",
-        "socket.h": "c"
+        "socket.h": "c",
+        "xutility": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -11,6 +11,7 @@
 |            书籍             |     作者      |
 | :-------------------------: | :-----------: |
 |      《C Prime Plus》       | Stephen Prata |
+|     《C++ Prime Plus》      | Stephen Prata |
 |      《深入理解C指针》      | Ricbard Reese |
 |        《征服C指针》        |   前桥和弥    |
 | 《Linux C 编程 一站式学习》 |    宋劲杉     |
