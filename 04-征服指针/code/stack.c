@@ -9,7 +9,7 @@ typedef Node *NodePtr;
 
 typedef struct _Stack{
     // 成员变量
-    Node *top;
+    NodePtr top;
     size_t size;
 
     // 不带返回值的成员方法
@@ -61,15 +61,24 @@ void printData(NodePtr node){
     printf("Now the Top Data: %s\n", (char *)node->data);
 }
 
+void dumpStack(StackPtr stk){
+    NodePtr top = stk->top;
+    while (top != NULL){
+        printData(stk->top_stack(stk));
+        stk->pop_stack(stk);
+        top = stk->top;
+    }
+}
+
 int main(){
     StackPtr stk = newStack();
+
     stk->push_stack(stk, "PersonA");
-    printData(stk->top_stack(stk));
     stk->push_stack(stk, "PersonB");
-    printData(stk->top_stack(stk));
     stk->push_stack(stk, "PersonC");
-    printData(stk->top_stack(stk));
-    
+
+    dumpStack(stk);
+
     return 0;
 }
 
