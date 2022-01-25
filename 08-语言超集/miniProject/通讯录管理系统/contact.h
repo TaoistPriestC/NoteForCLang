@@ -1,6 +1,7 @@
 
 #pragma once
 #define MAXN 1000
+
 typedef struct _Person{
     std::string name;
     std::string tel;

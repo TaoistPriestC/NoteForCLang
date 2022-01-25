@@ -16,7 +16,7 @@ void menu(){
 }
 
 void header(){
-    printf("%-8s\t\t", "姓名");
+    printf("%-12s\t\t", "姓名");
     printf("%-12s\t\t", "电话");
     printf("%-12s\t\t", "地址");
     printf("%-4s\t\t", "性别");
@@ -55,7 +55,7 @@ void inputContact(Person *ps){
 
 // 输入一个联系人
 void outputContact(Person *ps){
-    printf("%-8s\t\t", ps->name.c_str());
+    printf("%-12s\t\t", ps->name.c_str());
     printf("%-12s\t\t", ps->tel.c_str());
     printf("%-12s\t\t", ps->addr.c_str());
     printf("%-4s\t\t", ps->sex ? "男" : "女");
