@@ -1,7 +1,19 @@
-#include "allstl.h"
+#include <stdio.h>
+#include <string.h>
+#include "infoio.h"
 #include "contact.h"
 
-using namespace std;
+void menu(){
+    printf("=======================\n");
+    printf("===== 1.显示联系人 =====\n");
+    printf("===== 2.添加联系人 =====\n");
+    printf("===== 3.删除联系人 =====\n");
+    printf("===== 4.查找联系人 =====\n");
+    printf("===== 5.修改联系人 =====\n");
+    printf("===== 6.清空通讯录 =====\n");
+    printf("===== 0.退出通讯录 =====\n");
+    printf("=======================\n");
+}
 
 
 int main(){    
@@ -9,7 +21,7 @@ int main(){
     initContact();
     while(1){
         menu();
-        cin >> select;
+        scanf("%d", &select);
         switch (select){
             case 1://显示
                 showContact();

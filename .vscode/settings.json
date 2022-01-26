@@ -65,7 +65,10 @@
         "xloctime": "c",
         "xmemory": "c",
         "xstddef": "c",
-        "xtr1common": "c"
+        "xtr1common": "c",
+        "allstl.h": "c",
+        "contact.h": "c",
+        "infoio.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

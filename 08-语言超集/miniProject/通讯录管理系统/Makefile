@@ -1,8 +1,17 @@
-app:main.cpp
-	g++ main.o contact.o -o app
+app: infoio.o contact.o main.o
+	gcc infoio.o contact.o main.o -o app
 
-main.o:main.cpp
-	g++ -c main.c -o main.o
+infoio.o: infoio.c
+	gcc -c infoio.c
 
-contact.o:contact.cpp
-	g++ -c contact.cpp -o contact.o
+contact.o: contact.c
+	gcc -c contact.c
+
+main.o: main.c
+	gcc -c main.c
+
+clean:
+	rm infoio.o contact.o main.o -rf
+
+
+
