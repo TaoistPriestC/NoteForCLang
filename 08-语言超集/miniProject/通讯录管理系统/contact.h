@@ -16,6 +16,7 @@ typedef struct _Person{
 typedef struct _AddressBook{
     Person contactList[MAXN];
     size_t size;
+    size_t isChange;
 } AddressBook;
 
 typedef FILE *File;

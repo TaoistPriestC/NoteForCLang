@@ -7,8 +7,6 @@
 #include "contact.h"
 
 
-
-int isChange;
 AddressBook adbs;
 
 
@@ -35,12 +33,13 @@ void initContact(){
             &adbs.contactList[i].sex,
             &adbs.contactList[i].age);
     }
+    adbs.isChange = 0;
     closeFile(fp);
 }
 
 void exitContact(){
     printf(WELCOME_NEXT_TIME);
-    if(isChange){
+    if(adbs.isChange){
         File fp = openFile("database", "w+");
         fprintf(fp, "%ld\n", adbs.size);
         for (int i = 0; i < adbs.size; i++){
@@ -64,7 +63,7 @@ void addContact(){
     }else{
         inputContact(&adbs.contactList[adbs.size]);
         adbs.size++;
-        isChange = 1;
+        adbs.isChange = 1;
     }
     cls();
 }
@@ -79,7 +78,7 @@ void subContact(){
             adbs.contactList[i] = adbs.contactList[i + 1];
         }
         adbs.size--;
-        isChange = 1;
+        adbs.isChange = 1;
     }
     cls();
 }
@@ -90,7 +89,7 @@ void modifyContact(){
         printf(PERSON_NO_FOUND);
     }else{
         inputContact(&adbs.contactList[idx]);
-        isChange = 1;
+        adbs.isChange = 1;
     }
     cls();
 }
@@ -122,6 +121,6 @@ void showContact(){
 void clearContact(){
     printf(AD_BOOK_CLEARED);
     adbs.size = 0;
-    isChange = 1;
+    adbs.isChange = 1;
     cls();
 }
