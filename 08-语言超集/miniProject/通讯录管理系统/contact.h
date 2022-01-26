@@ -2,8 +2,8 @@
 #pragma once
 #define MAXN 1000
 
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 typedef struct _Person{
     char name[30];

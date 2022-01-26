@@ -68,7 +68,8 @@
         "xtr1common": "c",
         "allstl.h": "c",
         "contact.h": "c",
-        "infoio.h": "c"
+        "infoio.h": "c",
+        "string.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

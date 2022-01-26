@@ -24,3 +24,45 @@ typedef struct _Person{
 } Person;
 ```
 
+
+
+### 数据持久化
+
+　　这个项目比较初级，没有用到数据库，仅仅是采用简单读写文件的方式实现持久化处理，退出系统的时候，系统会检测通讯录是否发生改变，如果发生变更则将全新的通讯录覆盖写入`database`文件，这种做法的缺点是尽管只有少量修改也要全部覆盖，而且明文存储，保密性不好。
+
+```c
+void initContact(){
+    File fp = openFile("database", "r+");
+    fscanf(fp, "%ld\n", &adbs.size);
+    for (int i = 0; i < adbs.size; i++){
+        fscanf(fp, "%s %s %s %hhd %hhd\n",
+            &adbs.contactList[i].name[0],
+            &adbs.contactList[i].tel[0],
+            &adbs.contactList[i].addr[0],
+            &adbs.contactList[i].sex,
+            &adbs.contactList[i].age);
+    }
+    adbs.isChange = 0;
+    closeFile(fp);
+}
+
+void exitContact(){
+    printf(WELCOME_NEXT_TIME);
+    if(adbs.isChange){
+        File fp = openFile("database", "w+");
+        fprintf(fp, "%ld\n", adbs.size);
+        for (int i = 0; i < adbs.size; i++){
+            fprintf(fp, "%s %s %s %hhd %hhd\n",
+                adbs.contactList[i].name,
+                adbs.contactList[i].tel,
+                adbs.contactList[i].addr,
+                adbs.contactList[i].sex,
+                adbs.contactList[i].age);
+        }
+        closeFile(fp);
+    }
+    cls();
+    exit(EXIT_SUCCESS);
+}
+```
+

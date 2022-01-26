@@ -1,4 +1,5 @@
 // 与打印消息有关的配置信息
+#pragma  once
 #define     INPUT_WRONG         "输入数据有误!\n"
 #define     PERSON_NO_FOUND     "查无此人!\n"
 #define     WELCOME_NEXT_TIME   "欢迎下次使用!\n"
