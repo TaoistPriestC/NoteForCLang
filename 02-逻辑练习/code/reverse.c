@@ -42,7 +42,7 @@ int  _mergeSort(int list[], int listSize, int lo, int hi){
     return ltr + rtr + cnt;
 }
 
-int  mergeSort(int list[], int listSize){
+int mergeSort(int list[], int listSize){
     return _mergeSort(list, listSize, 0, listSize - 1);
 }
 
@@ -53,6 +53,7 @@ void printList(int list[], int listSize){
 }
 
 int list[] = {3, 5, 4, 2, 1, 8, -1};
+
 int main(){
     int listSize = sizeof(list) / sizeof(int);
     printList(list, listSize);
