@@ -1,5 +1,5 @@
-#ifndef VeCTOR_H
-#define VeCTOR_H
+#ifndef VECTOR_H
+#define VECTOR_H
 
 // 现在这种ifndef-define-endif模式通常使用#pragma once代替
 #include <iostream>
