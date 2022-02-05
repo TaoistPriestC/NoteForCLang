@@ -43,6 +43,7 @@ void inputContact(Person *ps){
     scanf("%hhd", &ps->age);
 }
 
+
 // 输出一个联系人
 void outputContact(Person *ps){
     printf("%-12s\t\t", ps->name);
@@ -51,8 +52,6 @@ void outputContact(Person *ps){
     printf("%-4s\t\t", ps->sex ? "男" : "女");
     printf("%-4d\t\n", ps->age);
 }
-
-
 
 
 
