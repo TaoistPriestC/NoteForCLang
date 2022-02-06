@@ -2,6 +2,8 @@
 
 　　重学C语言，记录一些笔记，这份教程并不适用于新手，其主要面向已经学过一遍的同学。与其说是”重学C语言“，不如说是以之作为载体，学习整个计算机体系，毕竟只有系统化的学习才能有所成长，碎片化的学习只有焦虑。
 
+　
+
 
 
 # 参考书籍
@@ -17,7 +19,7 @@
 | 《Linux C 编程 一站式学习》 |    宋劲杉     |
 |  《Linux C 程序设计基础》   |    秦攀科     |
 
-
+　
 
 
 
@@ -36,8 +38,6 @@ ubuntu1804.exe config --default-user root
 ubuntu2004.exe config --default-user root 
 ## 以此类推...
 ```
-
-　
 
 　
 
@@ -61,8 +61,6 @@ sudo apt install aptitude
 ```bash
 sudo aptitude install gdb
 ```
-
-　
 
 　
 
@@ -130,9 +128,9 @@ git push -u origin master
 fatal: unable to access 'XXX': OpenSSL SSL_read: Connection was reset, errno 10054
 ```
 
-　　
+　
 
-　#### step4:使用GDB调试代码
+#### step4:使用GDB调试代码
 
 　　按照上面的步骤走下来，如果环境仍未配好可以选择[在线学习](https://www.onlinegdb.com/)，GDB并不仅仅适用于C/C++，同样可用于调试Assembly、Go、Objective-C等一系列语言。对于C/C++来说，使用GDB调试之前在编译期间加入-g参数。
 
