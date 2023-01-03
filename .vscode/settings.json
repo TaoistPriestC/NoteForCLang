@@ -70,7 +70,8 @@
         "contact.h": "c",
         "infoio.h": "c",
         "string.h": "c",
-        "worker.h": "c"
+        "worker.h": "c",
+        "linkedlist.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
