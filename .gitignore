@@ -1,2 +1,3 @@
 .vscode/*.json
 *test*
+*.DS_Store*
